@@ -1,0 +1,30 @@
+let saldoVitoria = 85
+let derrotas = 10
+let nome = "Joyce"
+let nivel;  // Certifique-se de declarar a variável nivel
+
+if (saldoVitoria < 10) {
+    nivel = "Ferro"
+} else if (saldoVitoria >= 11 && saldoVitoria <= 20){
+    nivel = "Bronze"
+} else if (saldoVitoria >= 21 && saldoVitoria <= 50){
+    nivel = "Prata"
+} else if (saldoVitoria >= 51 && saldoVitoria <= 80){
+    nivel = "Ouro"
+} else if (saldoVitoria >= 81 && saldoVitoria <= 90){
+    nivel = "Diamante"
+} else if (saldoVitoria >= 91 && saldoVitoria <= 100){
+    nivel = "Lendário"
+} else {
+    nivel = "Imortal"
+}
+
+console.log("O Herói " + nome + " tem um saldo de vitórias de " + saldoVitoria + " e está no nível de " + nivel);
+
+function calcularSaldo(vitorias, derrotas){
+  return vitorias - derrotas;
+}
+
+// Corrija a chamada da função
+let saldoVitorias = calcularSaldo(saldoVitoria, derrotas);
+console.log("O Herói " + nome + " tem um saldo de vitórias de " + saldoVitorias + " e está no nível de " + nivel);
